@@ -16,3 +16,209 @@
   --typo-titre: "NOM-POLICE-TITRES", serif;
   --typo-corps: "NOM-POLICE-CORPS", sans-serif;
 }
+
+/* ========================================================= */
+/* SECTION 1 : HEADER + NAVIGATION */
+/* SECTION 2 : HERO / BANNIÈRE */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  /* background: #a52222; */
+  background-color: var(--couleur-fond);
+}
+header {
+  min-height: 100vh;
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(4, 30, 8, 0.3), rgba(4, 30, 10, 0.3)),
+    url(./images/photo-paysage-boreal.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 333px;
+  margin-left: 950px;
+  /* margin-left: 100 */
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 670;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: green;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.visit-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.visit-button:hover {
+  border: 1px solid #fff;
+  background: green;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+
+/* ========================================================= */
+/* SECTION 3 : SERVICES — 3 CARTES ÉGALES */
+#services {
+  text-align: center;
+  font-weight: 300;
+}
+#services h2 {
+  margin-top: 5%;
+  font-size: 35px;
+}
+.carte-service {
+  background: var(--couleur-blanc);
+  border-radius: 33px;
+  /* margin-bottom: 34%; */
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  flex-basis: 33%;
+}
+.carte-service:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.grille-services {
+  display: grid;
+  gap: 5%;
+  margin: 5%;
+  grid-template-columns: repeat(3, 1fr);
+  /* text-align: center; */
+}
+.grille-services img {
+  width: 20%;
+}
+
+/* ========================================================= */
+/* SECTION 4 : À PROPOS */
+/* #apropos {
+  display: flex;
+  align-content: center;
+} */
+.apropos-contenu {
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 2rem;
+  flex: 1;
+  align-items: center;
+  margin-left: 5%;
+  /* gap: 5%; */
+}
+.apropos-contenu h2 {
+  margin-bottom: 2%;
+}
+.apropos-contenu img {
+  width: 69%;
+  margin-left: 10%;
+  border-radius: 10%;
+}
+
+/* ========================================================= */
+/* SECTION 5 : ÉQUIPE — GRILLE 2x2 */
+/* .grille-equipe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+} */
+
+#equipe h2 {
+  text-align: center;
+  font-size: 40px;
+}
+/* Grid container */
+.grille-equipe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Each team card */
+.carte-membre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Profile photo */
+.carte-membre img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Member name */
+.carte-membre h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Job title */
+.carte-membre p {
+  margin: 0;
+  font-size: 0.9rem;
+}

@@ -1,23 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atelier Boréal Médias</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Boréal Médias</title>
 
-  <!-- TYPOGRAPHIES : deux familles fournies via Google Fonts -->
-  <!-- Remplacer les href ci-dessous par les liens fournis dans le kit -->
-  <!-- À répéter pour d'autres type à inclure, mais pas besoin de répéter le lien 'preconnect' -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="tyto 1 de google" rel="stylesheet">
-  <link href="typo 2 de google" rel="stylesheet">
-
-  <!-- FEUILLE DE STYLE EXTERNE -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ============================================================
+    <!-- TYPOGRAPHIES : deux familles fournies via Google Fonts -->
+    <!-- Remplacer les href ci-dessous par les liens fournis dans le kit -->
+    <!-- À répéter pour d'autres type à inclure, mais pas besoin de répéter le lien 'preconnect' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="tyto 1 de google" rel="stylesheet" />
+    <link href="typo 2 de google" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    />
+    <!-- FEUILLE DE STYLE EXTERNE -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
     SECTION 1 : HEADER + NAVIGATION
     Mise en page : Flexbox
     suggestion ->> justify-content: space-between — logo à gauche, liens à droite
@@ -27,173 +35,207 @@
     Exemple: utiliser simplement les balise <a> pour les liens,
     sans la liste <ul><li>
   ============================================================ -->
-  <header>
-    <a href="index.html">
-      <img src="images/abm-logo.png" alt="Logo Atelier Boréal Médias">
-    </a>
-   <!-- ===========================================================
+    <header>
+      <!-- ===========================================================
       
-          ===================================================== --> 
-    <nav>
-      <ul>
-        <li><a href="abm-index.html">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#equipe">Équipe</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+          ===================================================== -->
 
-
-  <!-- ============================================================
+      <nav>
+        <a href="squelette-abm-vitrine.html">
+          <img
+            src="images/boreal-media-logo.png"
+            alt="Logo Atelier Boréal Médias"
+          />
+        </a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="abm-index.html">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#equipe">Équipe</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Créer. Produire. Connecter</h1>
+        <p>
+          Atelier Boréal Médias accompagne les organisations dans leur
+          transformation numérique<br />de la création de contenu à la gestion
+          de leur présence en ligne.
+        </p>
+        <a href="#services" class="visit-button">Découvrir nos services</a>
+      </div>
+    </header>
+    <!-- ============================================================
     SECTION 2 : HERO / BANNIÈRE
     Mise en page : HTML standard
     Image fournie en arrière-plan — texte superposé par-dessus
     Indice : position relative sur .hero, position absolute sur .hero-contenu
   ============================================================ -->
-  <section class="hero">
-    <div class="hero-contenu">
-      <h1>Créer. Produire. Connecter.</h1>
-      <p>Atelier Boréal Médias accompagne les organisations dans leur transformation numérique, de la création de contenu à la gestion de leur présence en ligne.</p>
-      <a href="#services" class="bouton-cta">Découvrir nos services</a>
-    </div>
-  </section>
+    <!-- <section class="hero">
+      <div class="hero-contenu">
+        <h1>Créer. Produire. Connecter.</h1>
+        <p>
+          Atelier Boréal Médias accompagne les organisations dans leur
+          transformation numérique, de la création de contenu à la gestion de
+          leur présence en ligne.
+        </p>
+        <a href="#services" class="bouton-cta">Découvrir nos services</a>
+      </div>
+    </section> -->
 
-
-  <!-- ============================================================
+    <!-- ============================================================
     SECTION 3 : SERVICES — 3 CARTES ÉGALES
     Mise en page : Grid
     grid-template-columns: repeat(3, 1fr)
     Chaque carte : icone + titre h3 + paragraphe
   ============================================================ -->
-  <section id="services" class="services">
-    <h2>Ce que nous faisons</h2>
+    <section id="services" class="services">
+      <h2>Ce que nous faisons</h2>
 
-    <div class="grille-services">
+      <div class="grille-services">
+        <!-- Carte service 1 -->
+        <div class="carte-service">
+          <img src="images/abm-logo.png" alt="Icone production de contenu" />
+          <h3>Production de contenu</h3>
+          <p>
+            Nous concevons et produisons des contenus visuels et rédactionnels
+            adaptés à chaque plateforme, des médias sociaux aux campagnes de
+            marque complètes.
+          </p>
+        </div>
 
-      <!-- Carte service 1 -->
-      <div class="carte-service">
-        <img src="images/icone-contenu.png" alt="Icone production de contenu">
-        <h3>Production de contenu</h3>
-        <p>Nous concevons et produisons des contenus visuels et rédactionnels adaptés à chaque plateforme, des médias sociaux aux campagnes de marque complètes.</p>
+        <!-- Carte service 2 -->
+        <div class="carte-service">
+          <img src="images/abm-logo.png" alt="Icone stratégie numérique" />
+          <h3>Stratégie numérique</h3>
+          <p>
+            Notre équipe analyse votre présence en ligne et développe des
+            stratégies concrètes pour rejoindre vos audiences et atteindre vos
+            objectifs de croissance.
+          </p>
+        </div>
+
+        <!-- Carte service 3 -->
+        <div class="carte-service">
+          <img src="images/abm-logo.png" alt="Icone support technologique" />
+          <h3>Support technologique</h3>
+          <p>
+            Nous assurons la gestion et le soutien technique de vos outils
+            numériques, de votre site web à vos systèmes internes, pour que
+            votre équipe reste productive.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <!-- Carte service 2 -->
-      <div class="carte-service">
-        <img src="images/icone-strategie.png" alt="Icone stratégie numérique">
-        <h3>Stratégie numérique</h3>
-        <p>Notre équipe analyse votre présence en ligne et développe des stratégies concrètes pour rejoindre vos audiences et atteindre vos objectifs de croissance.</p>
-      </div>
-
-      <!-- Carte service 3 -->
-      <div class="carte-service">
-        <img src="images/icone-support.png" alt="Icone support technologique">
-        <h3>Support technologique</h3>
-        <p>Nous assurons la gestion et le soutien technique de vos outils numériques, de votre site web à vos systèmes internes, pour que votre équipe reste productive.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
+    <!-- ============================================================
     SECTION 4 : À PROPOS
     Mise en page : Flexbox
     display: flex — gap: 3rem — align-items: center
     Texte à gauche (flex: 1), image à droite (largeur fixe)
   ============================================================ -->
-  <section id="apropos" class="apropos">
-    <div class="apropos-contenu">
-      <div class="apropos-texte">
-        <h2>Une équipe ancrée dans le numérique</h2>
-        <p>Fondé à Montréal, Atelier Boréal Médias est un studio numérique indépendant qui travaille avec des organisations de toutes tailles. Nous combinons expertise technique et sensibilité créative pour livrer des projets qui ont un impact réel.</p>
-        <p>Notre approche est simple: comprendre votre contexte, proposer des solutions adaptées, et accompagner leur mise en oeuvre avec rigueur. Chaque projet est une collaboration, pas une simple commande.</p>
+    <section id="apropos" class="apropos">
+      <div class="apropos-contenu">
+        <div class="apropos-texte">
+          <h2>Une équipe ancrée dans le numérique</h2>
+          <p>
+            Fondé à Montréal, Atelier Boréal Médias est un studio numérique
+            indépendant qui travaille avec des organisations de toutes tailles.
+            Nous combinons expertise technique et sensibilité créative pour
+            livrer des projets qui ont un impact réel.
+          </p>
+          <p>
+            Notre approche est simple: comprendre votre contexte, proposer des
+            solutions adaptées, et accompagner leur mise en oeuvre avec rigueur.
+            Chaque projet est une collaboration, pas une simple commande.
+          </p>
+        </div>
+        <div class="apropos-image">
+          <img
+            src="images/photo-bureau-equipe.png"
+            alt="Équipe Atelier Boréal Médias au travail"
+          />
+        </div>
       </div>
-      <div class="apropos-image">
-        <img src="images/image-apropos.jpg" alt="Équipe Atelier Boréal Médias au travail">
-      </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ============================================================
+    <!-- ============================================================
     SECTION 5 : ÉQUIPE — GRILLE 2x2
     Mise en page : Grid
     suggestion ->> grid-template-columns: repeat(2, 1fr)
     suggestion ->> grid-template-rows: repeat(2, auto)
     Chaque carte : photo + nom + titre de poste
   ============================================================ -->
-  <section id="equipe" class="equipe">
-    <h2>Notre équipe</h2>
+    <section id="equipe" class="equipe">
+      <h2>Notre équipe</h2>
 
-    <div class="grille-equipe">
+      <div class="grille-equipe">
+        <!-- Membre 1 -->
+        <div class="carte-membre">
+          <img src="images/photo-sophie.jpg" alt="Photo de Sophie Tremblay" />
+          <h3>Sophie Tremblay</h3>
+          <p>Directrice de création</p>
+        </div>
 
-      <!-- Membre 1 -->
-      <div class="carte-membre">
-        <img src="images/photo-sophie.jpg" alt="Photo de Sophie Tremblay">
-        <h3>Sophie Tremblay</h3>
-        <p>Directrice de création</p>
+        <!-- Membre 2 -->
+        <div class="carte-membre">
+          <img
+            src="images/photo-marc.jpg"
+            alt="Photo de Marc-Antoine Lefebvre"
+          />
+          <h3>Marc-Antoine Lefebvre</h3>
+          <p>Développeur web senior</p>
+        </div>
+
+        <!-- Membre 3 -->
+        <div class="carte-membre">
+          <img src="images/photo-yara.jpg" alt="Photo de Yara Benali" />
+          <h3>Yara Benali</h3>
+          <p>Stratège en contenu numérique</p>
+        </div>
+
+        <!-- Membre 4 -->
+        <div class="carte-membre">
+          <img src="images/photo-carlos.jpg" alt="Photo de Carlos Reyes" />
+          <h3>Carlos Reyes</h3>
+          <p>Technicien en support TI</p>
+        </div>
       </div>
+    </section>
 
-      <!-- Membre 2 -->
-      <div class="carte-membre">
-        <img src="images/photo-marc.jpg" alt="Photo de Marc-Antoine Lefebvre">
-        <h3>Marc-Antoine Lefebvre</h3>
-        <p>Développeur web senior</p>
-      </div>
-
-      <!-- Membre 3 -->
-      <div class="carte-membre">
-        <img src="images/photo-yara.jpg" alt="Photo de Yara Benali">
-        <h3>Yara Benali</h3>
-        <p>Stratège en contenu numérique</p>
-      </div>
-
-      <!-- Membre 4 -->
-      <div class="carte-membre">
-        <img src="images/photo-carlos.jpg" alt="Photo de Carlos Reyes">
-        <h3>Carlos Reyes</h3>
-        <p>Technicien en support TI</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
+    <!-- ============================================================
     SECTION 6 : FOOTER
     Mise en page : Flexbox
     suggestion ->> justify-content: space-between
     Logo à gauche, liens au centre, adresse à droite
   ============================================================ -->
-  <footer>
-    <div class="footer-contenu">
+    <footer>
+      <div class="footer-contenu">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Logo Atelier Boréal Médias" />
+        </div>
 
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="Logo Atelier Boréal Médias">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#equipe">Équipe</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <address>
+          Atelier Boréal Médias Inc.<br />
+          1751, rue Richardson, bureau 3.105<br />
+          Montréal (Québec) H3K 1G6<br />
+          <a href="mailto:info@boreal-medias.ca">info@boreal-medias.ca</a>
+        </address>
       </div>
-
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#equipe">Équipe</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <address>
-        Atelier Boréal Médias Inc.<br>
-        1751, rue Richardson, bureau 3.105<br>
-        Montréal (Québec) H3K 1G6<br>
-        <a href="mailto:info@boreal-medias.ca">info@boreal-medias.ca</a>
-      </address>
-
-    </div>
-  </footer>
-
-
-</body>
+    </footer>
+  </body>
 </html>
