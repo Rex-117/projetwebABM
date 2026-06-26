@@ -1,52 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nous joindre | Atelier Boréal Médias</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nous joindre | Atelier Boréal Médias</title>
 
-  <!-- TYPOGRAPHIES : même lien que dans index.html -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="LIEN-GOOGLE-FONTS-ICI" rel="stylesheet">
+    <!-- TYPOGRAPHIES : même lien que dans index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="LIEN-GOOGLE-FONTS-ICI" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    />
 
-  <!-- MÊME FEUILLE DE STYLE que index.html -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <header>
-  <!-- ============================================================
+    <!-- MÊME FEUILLE DE STYLE que index.html -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- ============================================================
     HEADER : identique à index.html
     Copier-coller le même bloc <header> que dans index.html
   ============================================================ -->
-  </header>
+      <nav>
+        <a href="squelette-abm-vitrine.html">
+          <img
+            src="images/boreal-media-logo.png"
+            alt="Logo Atelier Boréal Médias"
+          />
+        </a>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="abm-index.html">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#equipe">Équipe</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="squelette-abm-contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="text-box">
+        <h1>Créer. Produire. Connecter</h1>
+        <p>
+          Atelier Boréal Médias accompagne les organisations dans leur
+          transformation numérique<br />de la création de contenu à la gestion
+          de leur présence en ligne.
+        </p>
+        <a href="#services" class="visit-button">Découvrir nos services</a>
+      </div>
+    </header>
 
-
-  <!-- ============================================================
+    <!-- ============================================================
     FORMULAIRE DE CONTACT
     Mise en page : HTML standard
     Centré avec max-width dans le CSS
     Champs : nom (text), courriel (email), message (textarea)
   ============================================================ -->
-  <main class="page-contact">
+    <main class="page-contact">
+      <h1>Nous joindre</h1>
+      <p>
+        Une question, un projet, une idée ? Écrivez-nous et nous vous répondrons
+        dans les plus brefs délais.
+      </p>
 
-    <h1>Nous joindre</h1>
-    <p>Une question, un projet, une idée ? Écrivez-nous et nous vous répondrons dans les plus brefs délais.</p>
-
-    <form class="formulaire-contact" action="#" method="post">
-      <!-- Devrait contenir une capture de:
+      <form class="formulaire-contact" action="#" method="post">
+        <!-- Devrait contenir une capture de:
               Nom complet, Adresse courriel, Message, et un bouton d'envoi
            Le formulaire n'a pas à fonctionner. Nous n'avons pas encore vu ces notions. Mais il doit être construit correctement selon ce que nous avons vu.-->
-    </form>
 
-  </main>
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
 
-  <footer>
-  <!-- ============================================================
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <!-- ============================================================
     FOOTER : identique à index.html
     Copier-coller le même bloc <footer> que dans index.html
   ============================================================ -->
-  </footer>
+      <div class="footer-contenu">
+        <div class="footer-logo">
+          <img
+            src="images/boreal-media-logo.png"
+            alt="Logo Atelier Boréal Médias"
+          />
+        </div>
 
-</body>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="squelette-abm-vitrine.html">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#equipe">Équipe</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="squelette-abm-contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <address>
+          Atelier Boréal Médias Inc.<br />
+          1751, rue Richardson, bureau 3.105<br />
+          Montréal (Québec) H3K 1G6<br />
+          <a href="mailto:info@boreal-medias.ca">info@boreal-medias.ca</a>
+        </address>
+      </div>
+    </footer>
+  </body>
 </html>
