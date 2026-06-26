@@ -154,6 +154,9 @@ nav .fa {
   display: flex;
   align-content: center;
 } */
+#apropos {
+  margin-top: 10%;
+}
 .apropos-contenu {
   display: flex;
   /* justify-content: space-evenly; */
@@ -179,12 +182,14 @@ nav .fa {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
 } */
-
+#equipe {
+  margin-top: 10%;
+}
 #equipe h2 {
   text-align: center;
   font-size: 40px;
+  margin-bottom: 5%;
 }
-/* Grid container */
 .grille-equipe {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -192,33 +197,79 @@ nav .fa {
   gap: 2rem;
   padding: 2rem;
 }
-
-/* Each team card */
 .carte-membre {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
+  padding: 5.5rem;
 }
-
-/* Profile photo */
 .carte-membre img {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-
-/* Member name */
 .carte-membre h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
-
-/* Job title */
 .carte-membre p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* SECTION 6 : FOOTER */
+footer {
+  background-color: var(--couleur-bordure);
+  margin-top: 5%;
+}
+.footer-contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-logo img {
+  width: 50%;
+  margin-left: 5%;
+}
+.footer-nav {
+  flex: 1;
+  text-align: right;
+  padding: 2% 9%;
+}
+.footer-nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.footer-nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.footer-nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: green;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.footer-nav ul li:hover:after {
+  width: 100%;
+}
+.footer-nav a {
+  text-decoration: none;
+}
+address a {
+  text-decoration: none;
+  color: #000000;
 }
