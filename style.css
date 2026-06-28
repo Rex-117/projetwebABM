@@ -38,17 +38,22 @@ header {
   background-position: center;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
 }
 nav {
   display: flex;
   padding: 2% 6%;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+nav::before {
+  content: "";
+  flex: 1;
 }
 nav img {
-  width: 333px;
-  margin-left: 950px;
-  /* margin-left: 100 */
+  padding-top: 10px;
+  width: 250px;
+  flex: 0 0 auto;
 }
 .nav-links {
   flex: 1;
@@ -188,7 +193,7 @@ nav .fa {
 #equipe h2 {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
 }
 .grille-equipe {
   display: grid;
@@ -229,18 +234,26 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 5%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 20px 5%;
+}
+.footer-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 .footer-logo img {
-  width: 50%;
-  margin-left: 5%;
+  width: 220px;
 }
 .footer-nav {
-  flex: 1;
-  text-align: right;
-  padding: 2% 9%;
+  /* flex: 1; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+.footer-nav ul {
+  padding: 0;
+  margin: 0;
 }
 .footer-nav ul li {
   list-style: none;
@@ -269,40 +282,82 @@ footer {
 .footer-nav a {
   text-decoration: none;
 }
+address {
+  flex: 1;
+  text-align: right;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 address a {
   text-decoration: none;
   color: #000000;
 }
 
+/* ========================================================= */
 /* Contact form */
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+.page-contact {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
 }
-
-input[type="submit"] {
-  background-color: #04aa6d;
-  color: white;
-  padding: 12px 20px;
+.page-contact h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+.page-contact p {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+.formulaire-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.formulaire-contact input,
+.formulaire-contact textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+}
+.formulaire-contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.formulaire-contact button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #444;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.formulaire-contact button[type="submit"]:hover {
+  background-color: #222;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+/* Scripting */
+/* Scroll reveal — hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 2s ease,
+    transform 2s ease;
+}
+
+/* Scroll reveal — visible state */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -8,6 +8,7 @@
     <!-- TYPOGRAPHIES : deux familles fournies via Google Fonts -->
     <!-- Remplacer les href ci-dessous par les liens fournis dans le kit -->
     <!-- À répéter pour d'autres type à inclure, mais pas besoin de répéter le lien 'preconnect' -->
+    <link rel="shortcut icon" href="images/abm-logo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="tyto 1 de google" rel="stylesheet" />
     <link href="typo 2 de google" rel="stylesheet" />
@@ -49,7 +50,7 @@
         </a>
         <div class="nav-links" id="navLinks">
           <ul>
-            <li><a href="abm-index.html">Accueil</a></li>
+            <li><a href="squelette-abm-vitrine.html">Accueil</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#equipe">Équipe</a></li>
             <li><a href="#apropos">À propos</a></li>
@@ -91,7 +92,7 @@
     grid-template-columns: repeat(3, 1fr)
     Chaque carte : icone + titre h3 + paragraphe
   ============================================================ -->
-    <section id="services" class="services">
+    <section id="services" class="services reveal">
       <h2>Ce que nous faisons</h2>
 
       <div class="grille-services">
@@ -136,16 +137,18 @@
     display: flex — gap: 3rem — align-items: center
     Texte à gauche (flex: 1), image à droite (largeur fixe)
   ============================================================ -->
-    <section id="apropos" class="apropos">
+    <section id="apropos" class="apropos reveal">
       <div class="apropos-contenu">
         <div class="apropos-texte">
           <h2>Une équipe ancrée dans le numérique</h2>
           <p>
             Fondé à Montréal, Atelier Boréal Médias est un studio numérique
             indépendant qui travaille avec des organisations de toutes tailles.
+            <br /><br />
             Nous combinons expertise technique et sensibilité créative pour
             livrer des projets qui ont un impact réel.
           </p>
+          <br />
           <p>
             Notre approche est simple: comprendre votre contexte, proposer des
             solutions adaptées, et accompagner leur mise en oeuvre avec rigueur.
@@ -168,7 +171,7 @@
     suggestion ->> grid-template-rows: repeat(2, auto)
     Chaque carte : photo + nom + titre de poste
   ============================================================ -->
-    <section id="equipe" class="equipe">
+    <section id="equipe" class="equipe reveal">
       <h2>Notre équipe</h2>
 
       <div class="grille-equipe">
@@ -214,10 +217,12 @@
     <footer>
       <div class="footer-contenu">
         <div class="footer-logo">
-          <img
-            src="images/boreal-media-logo.png"
-            alt="Logo Atelier Boréal Médias"
-          />
+          <a href="squelette-abm-vitrine.html">
+            <img
+              src="images/boreal-media-logo.png"
+              alt="Logo Atelier Boréal Médias"
+            />
+          </a>
         </div>
 
         <nav class="footer-nav">
@@ -238,5 +243,28 @@
         </address>
       </div>
     </footer>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
+        document.querySelector("header").style.backgroundPositionY =
+          -(scrollY * 0.2) + "px";
+      });
+    </script>
   </body>
 </html>

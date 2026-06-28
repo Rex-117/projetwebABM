@@ -37,7 +37,7 @@
         </a>
         <div class="nav-links" id="navLinks">
           <ul>
-            <li><a href="abm-index.html">Accueil</a></li>
+            <li><a href="squelette-abm-vitrine.html">Accueil</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#equipe">Équipe</a></li>
             <li><a href="#apropos">À propos</a></li>
@@ -68,48 +68,22 @@
         Une question, un projet, une idée ? Écrivez-nous et nous vous répondrons
         dans les plus brefs délais.
       </p>
-
       <form class="formulaire-contact" action="#" method="post">
-        <!-- Devrait contenir une capture de:
-              Nom complet, Adresse courriel, Message, et un bouton d'envoi
-           Le formulaire n'a pas à fonctionner. Nous n'avons pas encore vu ces notions. Mais il doit être construit correctement selon ce que nous avons vu.-->
+        <input type="text" id="nom" name="nom" placeholder="Nom complet" />
+        <input
+          type="email"
+          id="courriel"
+          name="courriel"
+          placeholder="Courriel"
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message"
+          rows="5"
+        ></textarea>
 
-        <div class="container">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Your name.."
-            />
-
-            <label for="lname">Last Name</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
-            />
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="Write something.."
-              style="height: 200px"
-            ></textarea>
-
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+        <button type="submit">Envoyer</button>
       </form>
     </main>
 
@@ -120,10 +94,12 @@
   ============================================================ -->
       <div class="footer-contenu">
         <div class="footer-logo">
-          <img
-            src="images/boreal-media-logo.png"
-            alt="Logo Atelier Boréal Médias"
-          />
+          <a href="squelette-abm-vitrine.html">
+            <img
+              src="images/boreal-media-logo.png"
+              alt="Logo Atelier Boréal Médias"
+            />
+          </a>
         </div>
 
         <nav class="footer-nav">
@@ -144,5 +120,12 @@
         </address>
       </div>
     </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
+        document.querySelector("header").style.backgroundPositionY =
+          -(scrollY * 0.2) + "px";
+      });
+    </script>
   </body>
 </html>
